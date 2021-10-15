@@ -1,0 +1,9 @@
+== Primitive & basic types
+
+include::primitives/uuid.adoc[]
+
+include::primitives/date-times.adoc[]
+
+include::primitives/tm.adoc[]
+
+include::primitives/irn.adoc[]

@@ -1,0 +1,48 @@
+[#environments-definition]
+=== Definition
+
+The environments describes infrastructure zones in which applications are deployed.
+
+[#environments-definition-non-production-family]
+==== Non-Production environment family
+
+[cols="1,2,1,1"]
+|===
+|Name |Description |Short name |Initial
+
+|`Development`
+|Used by a developer to test his/her own changes in a isolated fashion.
+|`dev`
+|`d`
+
+|`Integration`
+|Used by multiple developers to test integration between multiple assets.
+|`int`
+|`i`
+
+|`Validation`
+|Used by acceptance testers to validate the changes which have been done by developers.
+|`val`
+|`v`
+
+|`Staging`
+|Used as a stable iso-prod environment but dedicated to non-production usage.
+|`stg`
+|`s`
+
+|===
+
+
+[#environments-definition-production-family]
+==== Production environment family
+
+[cols="1,2,1,1"]
+|===
+|Name |Description |Short name |Initial
+
+|`Production`
+|Environment dedicated to production usage.
+|`prd`
+|`p`
+
+|===

@@ -1,0 +1,56 @@
+=== IRN - Infrastructure Resource Name
+
+The purpose of this type is to identify an infrastructure asset within the system.
+
+[#irn-format]
+==== Format
+
+A IRN should be formatted using `irn:tm:region:env:component/name/instance-id` format.
+
+[cols="1,2,1,2,2"]
+|===
+|Name |Description |Required |Constraints  |Possible values 
+
+|`tm`
+|If applicable, the trademark associated to this asset, otherwise `''`.
+|No
+|See <<tm-format, Trademark format>>
+|`julb.me`
+
+|`region`
+|If applicable, the region in which the asset is located, otherwise `''`.
+|No
+|string
+|`eu-west-1`, `eu`
+
+|`env`
+|The initial name of the environment to which the asset relates.
+|No
+|See <<environments-definition, Environment definitions>>
+|`d`, `i`, `v`, `s`, `p`
+
+|`component`
+|The underlying component type on which this asset is running.
+|No
+|string
+|`nginx`, `ec2`, `postgres`
+
+|`name`
+|The business name of the asset
+|No
+|string
+|`www`, `jira`, `inventory-service`
+
+|`instance-id`
+|A random or sequential value which is used to identify uniquely the asset if multiple replicas are used.
+|No
+|string
+|`01`, `02`, `89eec63`
+
+|===
+
+Examples:
+
+* `irn:julb.me:eu-west-1:p:nginx/www/01`
+* `irn::eu-west-1:v:postgresql/www/primary`
+* `irn:::d:cdn/www/01`

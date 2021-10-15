@@ -1,0 +1,6 @@
+[#environments-isolation]
+=== Isolation
+
+Network flows of environment families should be isolated from each-other.
+
+Meaning that, it should not possible for a environment of Non-Production family to communicate with an environment of Production family.

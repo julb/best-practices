@@ -1,0 +1,64 @@
+=== Output
+
+==== Formatter
+The application must output the applicative logs in JSON format.
+A line feed must separate each log line.
+
+==== Fields
+
+===== Standard fields
+
+The JSON structure should contain the following keys, *all lowercased*:
+[cols="1,2,1,2,2"]
+|===
+|Name |Description |Required |Constraints  |Possible values 
+
+|`level`
+|The criticity of the message
+|Yes
+|lowercased, among `fatal`, `error`, `warn`, `info`, `debug`, `trace`
+|`fatal`, `error`, `warn`, `info`, `debug`, `trace`
+
+|`time`
+|The time at which the log has been done
+|Yes
+|See <<datetime-datetime-format, Date time format>>
+|`2021-01-01T00:00:00.000000Z`
+
+|`message`
+|The message associated to the log
+|Yes
+|string
+|`Hello, World`
+
+|`irn`
+|The infrastructure resource name who has sent the log.
+|Yes
+|See <<irn-format, Infrastructure Resource Name format>>
+|`irn:tm:region:env:component/name/instance-id`
+|===
+
+===== Contextual fields
+[cols="1,2,1,2,2"]
+|===
+|Name |Description |Required |Constraints  |Possible values 
+
+|`tm`
+|The trademark.
+|No
+|See <<tm-format, Trademark format>>
+|`julb.me`
+
+|`x-request-id`
+|The ID of the request which should be passed end-to-end to track the request among all services
+|No
+|See <<uuid-format, Universal Identifier format>>
+|`f09c7e19de274f99843619cde3565f14`
+|===
+
+===== NGinx fields
+
+
+===== Custom fields
+
+It is also possible to add extra fields to the JSON structure as needed.

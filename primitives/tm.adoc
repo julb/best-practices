@@ -1,0 +1,17 @@
+[#tm]
+=== Trademark
+
+The purpose of this type is to identify a tenant in a multi-tenant architecture.
+
+[#tm-format]
+==== Format
+
+The trademark is a string which takes the form of a root domain name.
+It is injected in the context of a request to identify the tenant to which an item is attached.
+
+The regexp to validate a trademark is: `^[a-z0-9][a-z0-9\\-]+[a-z0-9](\\.[a-z]+)?$` with a maximum length of `128c`.
+
+Examples:
+
+* `julb.me`
+* `google.fr`

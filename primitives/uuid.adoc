@@ -1,0 +1,18 @@
+=== Universal unique identifier
+
+The purpose of this type is to identify uniquely and universally an object within the system.
+
+[#uuid-format]
+==== Format
+
+The format of the Universal Identifier is a `32c alphanumeric lowercased string`.
+
+The regexp to validate this identifier is: `^[a-z0-9]{32, 32}$`.
+
+[#uuid-usage]
+==== Usage
+
+The universal identifier MUST be used for:
+
+* ID of business objects
+* Request identifiers which are used to track the request among multiple systems

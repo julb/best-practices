@@ -1,12 +1,11 @@
-= Hello, AsciiDoc!
-Doc Writer <doc@example.com>
+= My best practices
+include::authors.adoc[]
+LPR55, {docdate}: A Special Edition
+:description: This document is a guide of my best practices for Software development, based on my experience.
+include::attributes.adoc[]
 
-An introduction to http://asciidoc.org[AsciiDoc].
+include::primitives.adoc[]
 
-== First Section
+include::environments.adoc[]
 
-* item 1
-* item 2
-
-[source,ruby]
-puts "Hello, World!"
+include::logging.adoc[]

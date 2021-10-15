@@ -1,0 +1,37 @@
+=== Date & Times
+
+[#datetime-date-format]
+==== Date format
+
+A date should be formatted using `YYYY-MM-DD` format, where:
+
+* `YYYY`: the year on 4 digits (ex: `2021`)
+* `MM`: the month on 2 digits (ex: `01` for January)
+* `DD`: the day on 2 digits (ex: `01` for the 1st day of the month)
+
+Examples:
+
+* `2021-01-01` : January, 1st 2021
+* `2020-02-29` : February, 29th 2020
+
+[#datetime-datetime-format]
+==== Datetime format
+
+In order to perform appropriate sorting, a date time should always be expressed in `UTC` using the following format: `YYYY-MM-DDThh:mm:ss.SSSSSSZ`, where:
+
+* `YYYY`: the year on 4 digits (ex: `2021`)
+* `MM`: the month on 2 digits (ex: `01` for January)
+* `DD`: the day on 2 digits (ex: `01` for the 1st day of the month)
+* `T`: static separator
+* `hh`: the hour on 2 digits, 24h format (ex: `23` for 11pm)
+* `mm`: the minutes on 2 digits (`00` to `59`)
+* `ss`: the seconds on 2 digits (`00` to `59`)
+* `SSSSSS`: the nanoseconds on 6 digits
+* `Z`: suffix indicating that the datetime is UTC-based.
+
+The `.SSSSSS` section is optional. If not present, it should be interpreted as `.000000` value.
+
+Examples:
+
+* `2021-01-01T00:00:00Z` : January, 1st 2021, 00:00:00 UTC
+* `2020-02-29T23:59:12.123456Z` : February, 29th 2021, 23:59:12 123456 UTC
